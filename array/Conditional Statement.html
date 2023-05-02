@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+   <input type="text" placeholder="enter a number" id="num"> 
+   <button onclick=chek()>chek</button>
+   <script>
+    function chek(){
+
+        var n =document.getElementById("num").value;
+      console.log(num);
+        if(num<13){
+            console.log("1 kms");
+        }
+        else if(num>=13 &&  num<18){
+            console.log("5 kms");
+        }
+        else if(num>=18 &&  num<30){
+            console.log("10 kms");
+        }
+        else{
+            console.log("You can have friends from anywhere");
+        }
+    }
+   </script>
+</body>
+</html>

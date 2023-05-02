@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputvalue" placeholder="enter value">
+    <button onclick="findDay()">chek</button>
+    <h1 id="output">week of the day :</h1>
+    <script>
+        function findDay(){
+            console.log("click");
+            var value = parseInt(document.getElementById("inputvalue").value);
+            console.log(value,typeof value);
+            switch(value){
+                case 0:
+                    console.log("monday");
+                    day = "monday"
+                break;
+                case 1:
+                    console.log("tuesday");
+                    day = "tuesday"
+                break;
+                case 2:
+                    console.log("wednesday");
+                    day = "wednesday"
+                break;
+                case 3:
+                    console.log("thursday");
+                    day = "thursday"
+                break;
+                case 4:
+                    console.log("friday");
+                    day = "friday"
+                break;
+                case 5:
+                    console.log("saturday");
+                    day = "saturday"
+                break;
+                default: 
+                console.log("invalid format");
+                break;
+            }
+            console.log("day",day)
+            document.getElementById("output").innerHTML = "week of the day :" + day;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a" placeholder="enter your a">
+    <input type="text" id="b" placeholder="enter your b">
+    <input type="text" id="c" placeholder="enter your c">
+    <input type="text" id="d" placeholder="enter your d">
+    <input type="text" id="e" placeholder="enter your e">
+    <button onclick="getAge()">submit</button>
+    <script>
+        function getAge() {
+            console.log("click");
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = parseInt(document.getElementById("c").value);
+            var d = parseInt(document.getElementById("d").value);
+            var e = parseInt(document.getElementById("e").value);
+
+            if (a == b) {
+                console.log("a and b are same");
+            }
+            else if (b == c) {
+                console.log("b and c are same");
+            }
+            if (c == a) {
+                console.log("a and c are same");
+            }
+            else {
+                if (a > b) {
+                    if (a > c) {
+                        if (a > d) {
+                            if (a > e) {
+                                console.log("a is big");
+                            }
+                            else if (b > a) {
+                                console.log("b is big");
+                            }
+                            else if (c > a) {
+                                console.log("c is big");
+                            }
+                            else if (d > a) {
+                                console.log("d is big");
+                            }
+                            else {
+                                console.log("e is big");
+                            }
+                        }
+                    }
+                }
+                else if (b > c) {
+                    if (b > d) {
+                        if (b > e) {
+                            console.log("b is big");
+                        }
+                        else if (c > b) {
+                            console.log("c is big");
+                        }
+                        else if (d > b) {
+                            console.log("d is big");
+                        }
+                        else {
+                            console.log("e is big");
+                        }
+                    }
+                }
+                else if (c > e) {
+                    if (c > d) {
+                        if(c > e){
+                            console.log("c is big");
+                        }
+                        else{
+                            console.log("b is big");
+                        } 
+                    }  
+                }
+                else {
+                    if (d > e) {
+                        console.log("d is big");
+                    }
+                    else {
+                        console.log(" e is big");
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        form{
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="res"></div>
+    <form id="form">
+        <input type="text" placeholder="name" id="name">
+        <input type="email" placeholder="email" id="email">
+        <input type="password" placeholder="password" id="password">
+        <input type="number" placeholder="number" id="number">
+        <input type="text" placeholder="designation" id="designation">
+        <input type="number" placeholder="salary" id="salary">
+        <input type="text" placeholder="gender" id="gender">
+        <input type="submit" value="sign up">
+     </form> 
+    </form>
+    <script >
+        document.getElementById("form").addEventListener("submit", function (e) {
+    e.preventDefault()
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById('password').value;
+    let gender = document.getElementById('gender').value;
+    let number = document.getElementById("number").value;
+    let designation = document.getElementById('designation').value;
+    let salary = document.getElementById('salary').value;   
+    let data = {
+        name: name,
+        email: email,
+        password: password,
+        gender: gender,
+        number: number,
+        designation: designation,
+        salary: salary,
+    }
+    document.getElementById("res").innerHTML=""
+    console.log(data)
+    let namee = document.createElement("h2")
+    namee.innerHTML = `Name : ${data.name}`
+    let emaill = document.createElement("h2")
+    emaill.innerHTML = `Email: : ${data.email}`
+    let passwwordd = document.createElement("h2")
+    passwwordd.innerHTML = `Password : ${data.password}`
+    let genderr = document.createElement("h2")
+    genderr.innerHTML = `Gender: ${data.gender}`
+    let numberr = document.createElement("h2")
+    numberr.innerHTML = `Number : ${data.number}`
+    let designationn = document.createElement("h2")
+    designationn.innerHTML = `Designation: ${data.designation}`
+    let salaryy = document.createElement("h2")
+    salaryy.innerHTML = `Salary : ${data.salary}`
+    document.getElementById("res").append(namee, emaill, passwwordd, numberr, genderr,designationn, salaryy);
+});
+    </script>
+</body>
+</html>

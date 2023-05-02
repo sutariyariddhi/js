@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        form {
+            display: flex;
+            justify-content: center;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="res"></div>
+    <form id="form">
+        <input type="text" placeholder="name" id="name">
+        <input type="email" placeholder="email" id="email">
+        <input type="password" placeholder="password" id="password">
+        <input type="number" placeholder="number" id="number">
+        <input type="text" placeholder="designation" id="designation">
+        <input type="number" placeholder="salary" id="salary">
+        <input type="text" placeholder="gender" id="gender">
+        <input type="submit" value="sign up">
+    </form>
+    </form>
+    <table border="2px" cellspacing="10px" cellpadding="10px">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>number</th>
+                <th>salary</th>
+                <th>password</th>
+                <th>designation</th>
+                <th>gender</th>
+            </tr>
+        </thead>
+        <tbody id="data"></tbody>
+    </table>
+    <script>
+        document.getElementById("form").addEventListener("submit", function (e) {
+            e.preventDefault()
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById('password').value;
+            let gender = document.getElementById('gender').value;
+            let number = document.getElementById("number").value;
+            let designation = document.getElementById('designation').value;
+            let salary = document.getElementById('salary').value;
+            let data = {
+                name: name,
+                email: email,
+                password: password,
+                gender: gender,
+                number: number,
+                designation: designation,
+                salary: salary,
+            }
+            console.log(data)
+            let tr = document.createElement('tr')
+            let namee = document.createElement("th")
+            namee.innerHTML = `Name : ${data.name}`
+            let emaill = document.createElement("th")
+            emaill.innerHTML = `Email: : ${data.email}`
+            let passwwordd = document.createElement("th")
+            passwwordd.innerHTML = `Password : ${data.password}`
+            let genderr = document.createElement("th")
+            genderr.innerHTML = `Gender: ${data.gender}`
+            let numberr = document.createElement("th")
+            numberr.innerHTML = `Number : ${data.number}`
+            let designationn = document.createElement("th")
+            designationn.innerHTML = `Designation: ${data.designation}`
+            let salaryy = document.createElement("th")
+            salaryy.innerHTML = `Salary : ${data.salary}`
+            tr.append(namee, emaill, passwwordd, numberr, genderr, designationn, salaryy)
+            document.getElementById("data").append(tr)
+        });
+    </script>
+</body>
+
+</html>
